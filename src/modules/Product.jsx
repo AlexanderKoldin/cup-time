@@ -1,5 +1,4 @@
 export const Product = ({ data }) => {
-	console.log(data);
 	return (
 		<li className='products__item'>
 			<article className='product'>
