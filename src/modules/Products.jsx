@@ -1,7 +1,16 @@
-import { products } from '../products';
+import { useEffect } from 'react';
+// import { products } from '../products';
 import { Product } from './Product';
+import { useProducts } from '../context/ProductContext';
 
 export const Products = () => {
+	const { products, setCategory } = useProducts();
+	const category = 'tea';
+
+	useEffect(() => {
+		setCategory(category);
+	}, [category, setCategory]);
+
 	return (
 		<section className='products'>
 			<div className='container'>
